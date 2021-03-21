@@ -9,6 +9,7 @@ The Python code will import the raw tabulated results file and perform a series 
 How many votes were cast in this congressional election?
 - Total votes casted in this congressional election was 369,711. 
 
+
 Provide a breakdown of the number of votes and the percentage of total votes for each county in the precinct.
 
 - The breakdown of the results for each country is as follows:
@@ -16,9 +17,11 @@ Provide a breakdown of the number of votes and the percentage of total votes for
 	- Denver County: 306,055 votes (82.8% of total)
 	- Arapahoe County: 24,801 votes (6.7% of total)
 
+
 Which county had the largest number of votes?
 
 - Denver county had the largest number of votes.
+
 
 Provide a breakdown of the number of votes and the percentage of the total votes each candidate received.
 
@@ -26,6 +29,7 @@ Provide a breakdown of the number of votes and the percentage of the total votes
 	- Charles Casper Stockham: 85,213 votes (23.0% of total)
 	- Diana DeGette: 272,892 votes (73.8% of total)
 	- Raymon Anthony Doane: 11,606 votes (3.1% of total)
+
 
 Which candidate won the election, what was their vote count, and what was their percentage of the total votes?
 
