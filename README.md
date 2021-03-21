@@ -40,18 +40,18 @@ The winning candidate was Diana DeGette, 272,892 votes were casted for her, whic
 
 There are two additional ways this code can be modified to be used for future elections. 
 ### Method 1:
-Instead of hard coding the row values for variables “candidate_name” and “county_name” (seen here), these variables can be set to dynamic in case the referenced data are located in different columns. 
+Instead of hard coding the row values for variables “candidate_name” and “county_name” [seen here](https://github.com/donovancai/Election_Analysis/blob/master/Resources/hard_code.png), these variables can be set to dynamic in case the referenced data are located in different columns. 
 
-First of all, the assumption is that all datasets this code will be used on will have columns that are titled “Candidate” and “County”, this is an easy change in the original data to work with the code without messing up any raw data.  To begin, two new variables will be created: TYPE_candidate = “Candidate” and TYPE_county = “County”, which hard codes the values that will be searched for in the data file. 
+First of all, the assumption is that all datasets this code will be used on will have columns that are titled “Candidate” and “County”, this is an easy change in the original data to work with the code without messing up any raw data.  To begin, two new variables will be created: TYPE_candidate = “Candidate” and TYPE_county = “County”, which hard codes the values that will be searched for in the data file. These two new variables can be [seen here](https://github.com/donovancai/Election_Analysis/blob/master/Resources/dynamic.PNG)
 
 Secondly, a “for” loops will be constructed. The “len” function will be used to determine the length of variable “header”, which contains data for the first row of the data file. “h_index” is then set to access different index positions in “header” and is looking for a matching value for TYPE_candidate. When a matching value is found, a new variable “candidate_name_col_index” is set to equal to “h_index”, this initializes the position of the column containing candidate data. 
 
 Lastly, another “for” loop is created to perform similar functions as the “for” above, the difference is this time the “h_index” is looking for a matching value for TYPE_county, and a new variable “county_name_col_index” is created and set to equal to “h_index” to initialize the position of the column containing county data. 
 
-These “for” loops can be seen HERE. I had the idea to have the code iterate through the header row to look for matching values to make the variable dynamic, but unfortunately, I did not know how to code it, I had the help of TA James to create these “for” loops. 
+These “for” loops can be [seen here](https://github.com/donovancai/Election_Analysis/blob/master/Resources/for_loops.PNG). I had the idea to have the code iterate through the header row to look for matching values to make the variable dynamic, but unfortunately, I did not know how to code it, I had the help of TA James to create these “for” loops. 
 
 ### Method 2:
-Another modification to this code is to show the breakdown of candidates for each county. This can show how close the race was and the political sentiment within each county. Unfortunately I do not know enough Python to complete this, so I created the results using Pandas in Jupyter Notebook, which can be seen HERE. 
+Another modification to this code is to show the breakdown of candidates for each county. This can show how close the race was and the political sentiment within each county. Unfortunately I do not know enough Python to complete this, so I created the results using Pandas in Jupyter Notebook, which can be [seen here](https://github.com/donovancai/Election_Analysis/blob/master/Resources/county_candidate.PNG). 
 
 This is done by importing the pandas dependencies first and transforming it to a DataFrame. The DataFrame can then be filtered by using the groupby.() function to be sorted by County and Candidates. The sum of votes for each candidate is tallied up by using the count() function on the sorted DataFrame. 
 
